@@ -29,7 +29,7 @@ def load_css(*paths: str) -> None:
         css += Path(path).read_text()
     st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 
-load_css(os.path.join(BASE_DIR,"styles","background.css"), os.path.join(BASE_DIR,"styles","metrics.css")
+load_css(os.path.join(BASE_DIR,"styles","background.css"), os.path.join(BASE_DIR,"styles","metrics.css"))
 # ── Header ────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div class="jb-title">Dashboard Ads</div>
