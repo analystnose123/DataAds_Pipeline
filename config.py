@@ -3,8 +3,8 @@ import os
 from pathlib import Path
 import streamlit as st
 
-BASE_DIR = Path(__file__).resolve().parent
-load_dotenv()
+#BASE_DIR = Path(__file__).resolve().parent
+#load_dotenv(BASE_DIR/".streamlit/secrets.toml")
 class DashboardConfig:
     
     DB_AGE_PATH = st.secrets.get("DB_AGE") 
