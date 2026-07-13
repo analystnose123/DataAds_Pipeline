@@ -4,24 +4,25 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv()
+class DashboardConfig:
+    
+    DB_AGE_PATH = st.secrets.get("DB_AGE") 
+    DB_LOC_PATH = st.secrets.get("DB_LOC") 
+    DB_CAM_PATH = st.secrets.get("DB_CAM") 
+    DB_KEY_PATH = st.secrets.get("DB_KEY")
 
-class Config:
-    TARGET_PATH = os.getenv('TARGET_PATH')
-    SOURCE_PATH = os.getenv('SOURCE_PATH')
+    db_loc = st.secrets.get("db_loc") 
+    db_campaign = st.secrets.get("db_camp")
+    db_keyword = st.secrets.get("db_keyword")
+    db_age = st.secrets.get("db_age") 
 
-    LOC_DB_PATH = os.getenv("LOC_DB_PATH")
-    CAMPAIGN_DB_PATH = os.getenv("CAMP_DB_PATH")
-    AGE_DB_PATH = os.getenv("AGE_DB_PATH")
-    KEYWORD_DB_PATH = os.getenv("KEYWORD_DB_PATH")
+    LOC_TABLE = st.secrets.get("LOC_TABLE")
+    KEY_TABLE = st.secrets.get("KEY_TABLE")
+    CAMP_TABLE = st.secrets.get("CAMP_TABLE")
+    AGE_TABLE = st.secrets.get("AGE_TABLE")
 
-    db_loc = os.getenv("db_loc")
-    db_campaign=os.getenv("db_camp")
-    db_age = os.getenv("db_age")
-    db_keywords = os.getenv("db_keyword")
-
-    month = os.getenv("MONTh")
-    year = os.getenv("YEAR")
-
+    USE_MOTHERDUCK = st.secrets.get("USE_MOTHERDUCK")
+    ACCESS_TOKEN = st.secrets.get("ACCESS_TOKEN")
     
 
 
