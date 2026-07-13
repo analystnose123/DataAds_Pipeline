@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import os
 from pathlib import Path
+import streamlit as st
 
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv()
